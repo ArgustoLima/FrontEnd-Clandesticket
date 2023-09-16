@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import "../../../../config-scss/variables.scss";
+
+:host {
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 180px;
+    color: $cinza;
+  }
+
+  h2 {
+    padding-top: 32px;
+  }
+
+  p {
+    padding-top: 32px;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../../config-scss/variables.scss";
+
+:host {
+  footer {
+    background-color: $branco;
+    text-align: center;
+    padding: 32px 0;
+    border-top: 1px solid $preto;
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: black;
+
+      &:last-child {
+      font-weight: 400;
+      font-size: 12px;
+      color: black;
+      padding-top: 12px;
+      }
+    }
+  }
+}
