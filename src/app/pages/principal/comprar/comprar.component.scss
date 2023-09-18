@@ -1,0 +1,33 @@
+@import "../../../../config-scss/variables.scss";
+
+:host {
+  .listagem {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    padding: 20px 0;
+
+    .item {
+      background-color: $branco;;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 260px;
+      height: 300px;
+
+      &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+      }
+
+      p {
+        padding-top: 10px;
+        word-wrap: break-word;
+      }
+
+      .informacoes {
+        height: 280px;
+      }
+    }
+  }
+}

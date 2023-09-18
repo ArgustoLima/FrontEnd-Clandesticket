@@ -1,0 +1,20 @@
+<app-header-principal></app-header-principal>
+<main>
+  <section class="listagem">
+      <a class="item">
+        <div class="informacoes">
+          <h2>Nome</h2>
+          <p>Empresa/Dono</p>
+          <p>Descricao</p>
+          <p>Local</p>
+        </div>
+
+        <div class="acoes">
+          <button [routerLink]="['/excluir-item']"><img src="../../.././../assets/icone-excluir.png" alt="Lixeira para excluir" class="icone"></button>
+          <button [routerLink]="['/editar-item']"><img src="../../.././../assets/icone-editar.png" alt="Ícone para editar" class="icone"></button>
+        </div>
+      </a>
+  </section>
+  <app-excluir-item *ngIf="mostrarGrid"></app-excluir-item>
+</main>
+<app-footer></app-footer>

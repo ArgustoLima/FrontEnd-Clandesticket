@@ -1,0 +1,40 @@
+:host {
+  .grid {
+    display: flex;
+    justify-content: center;
+
+   .caixa {
+      background-color: white;
+      height: 200px;
+      width: 400px;
+      border-radius: 10px;
+
+      h2 {
+        margin-top: 20px;
+      }
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        margin-top: 10px;
+        background-color: rgb(204, 231, 244);
+        border-radius: 5px;
+        width: 60%;
+        height: 30px;
+        cursor: pointer;
+
+        p {
+          margin: 0 auto;
+          font-weight: 300;
+
+          &:hover {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

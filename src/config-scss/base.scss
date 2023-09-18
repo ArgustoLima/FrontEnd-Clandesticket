@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
-@import "./variables.scss";
 
 * {
   font-family: "Roboto", sans-serif;
@@ -9,6 +8,7 @@
 
 main {
   background: url("../assets/bg.jpg");
+  background-size: cover;
   padding: 64px 0;
   display: flex;
   flex-direction: column;

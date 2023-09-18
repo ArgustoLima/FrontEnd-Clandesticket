@@ -1,5 +1,13 @@
 <app-header-login></app-header-login>
 <main>
+  <h2>Insira suas inforçaões para se logar no site:</h2>
 
+  <form>
+    <input class="caixa-input" placeholder="CPF" type="text"/>
+    <input class="caixa-input" placeholder="Senha" type="password"/>
+    <button class="botao" [routerLink]="['/comprar']">ENTRAR</button>
+  </form>
+
+  <p class="tem-conta">Não tem uma conta? <a class="criar-conta" [routerLink]="['/cadastrar-login']">Criar conta.</a></p>
 </main>
 <app-footer></app-footer>
