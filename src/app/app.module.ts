@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderLoginComponent } from './shared/header-login/header-login.component';
 import { HomeComponent } from './pages/login/home/home.component';
@@ -15,6 +17,8 @@ import { CadastrarLoginComponent } from './pages/login/cadastrar-login/cadastrar
 import { ComprarItemComponent } from './pages/principal/comprar-item/comprar-item.component';
 import { EditarItemComponent } from './pages/principal/editar-item/editar-item.component';
 import { ExcluirItemComponent } from './pages/principal/excluir-item/excluir-item.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CadastrarPagamentoComponent } from './pages/principal/cadastrar-pagamento/cadastrar-pagamento.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +35,13 @@ import { ExcluirItemComponent } from './pages/principal/excluir-item/excluir-ite
     ComprarItemComponent,
     EditarItemComponent,
     ExcluirItemComponent,
+    CadastrarPagamentoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

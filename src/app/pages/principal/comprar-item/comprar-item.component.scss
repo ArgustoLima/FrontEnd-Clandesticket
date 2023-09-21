@@ -1,13 +1,16 @@
+@import "../../../../config-scss/variables.scss";
+
 :host {
   .grid {
     display: flex;
     justify-content: center;
 
-   .caixa {
+    .caixa {
       background-color: white;
-      height: 220px;
+      height: 260px;
       width: 400px;
       border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
       h2 {
         margin-top: 20px;
@@ -20,9 +23,9 @@
 
       button {
         margin-top: 10px;
-        background-color: rgb(204, 231, 244);
+        background-color: rgb(238, 241, 243);
         border-radius: 5px;
-        width: 60%;
+        width: 51%;
         height: 30px;
         cursor: pointer;
 
@@ -35,6 +38,32 @@
           }
         }
       }
+
+      select {
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 300;
+      width: 51%;
+
+      &:hover {
+        font-weight: 400;
+        cursor: pointer;
+       }
+      }
     }
+  }
+
+  .tem-conta {
+    font-size: 14px;
+    font-size: 700;
+    padding-top: 32px;
+  }
+
+  .criar-conta {
+    font-size: 16px;
+    font-size: 700;
+    color: $azul;
+    margin-left: 5px;
+    cursor: pointer;
   }
 }

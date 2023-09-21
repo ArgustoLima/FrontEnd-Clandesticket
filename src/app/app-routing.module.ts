@@ -1,3 +1,4 @@
+import { CadastrarPagamentoComponent } from './pages/principal/cadastrar-pagamento/cadastrar-pagamento.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/login/home/home.component';
@@ -38,6 +39,9 @@ const routes: Routes = [
   },
   {
     path: 'excluir-item', component: ExcluirItemComponent
+  },
+  {
+    path: 'cadastrar-cartao', component: CadastrarPagamentoComponent
   },
   {
     path: '**', redirectTo: ''

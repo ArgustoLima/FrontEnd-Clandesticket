@@ -4,11 +4,21 @@
     <div class="caixa">
       <h2>Deseja confirmar a compra?</h2>
       <p>Nome Evento</p>
-      <p>R$...</p>
+      <p>Valor</p>
 
-      <button><p>Sim</p></button>
-      <button [routerLink]="['/comprar']"><p>Cancelar</p></button>
+      <select>
+        <option value="">Forma de pagamento</option>
+        <option value="credito">Crédito</option>
+        <option value="debito">Débito</option>
+      </select>
+
+      <div>
+        <button [routerLink]="['/cadastrar-cartao']"><p>Sim</p></button>
+        <button [routerLink]="['/comprar']"><p>Cancelar</p></button>
+      </div>
     </div>
   </div>
+
+  <p class="tem-conta">Já cadastrou seu cartão? <a class="criar-conta" [routerLink]="['/cadastrar-cartao']">Cadastrar cartão.</a></p>
 </main>
 <app-footer></app-footer>
