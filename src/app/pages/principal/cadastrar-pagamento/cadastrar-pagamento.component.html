@@ -3,14 +3,15 @@
   <h2>Insira as informações para cadastrar o seu cartão:</h2>
 
   <form>
-    <select name="tipo">
+    <select [(ngModel)]="selectedTipo" name="tipo">
       <option value="">Selecione o tipo do cartão</option>
-      <option value="credito">Crédito</option>
-      <option value="debito">Débito</option>
+      <option value="CREDITO">Crédito</option>
+      <option value="DEBITO">Débito</option>
     </select>
 
-    <input class="caixa-input" placeholder="Número do cartão" className="input" type="text">
-    <button class="botao">Cadastrar</button>
+    <input #numero_cartao class="caixa-input" maxlength="16" placeholder="Número do cartão" className="input" type="text">
   </form>
+
+  <button class="botao" (click)="pagamentoPost(selectedTipo, numero_cartao.value)">Cadastrar</button>
 </main>
 <app-footer></app-footer>

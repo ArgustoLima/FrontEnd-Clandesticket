@@ -1,20 +1,22 @@
 <app-header-principal></app-header-principal>
 <main>
   <section class="listagem">
+    <div *ngFor="let itens of listaItens">
       <a class="item">
         <div class="informacoes">
-          <h2>Nome</h2>
-          <p>Valor</p>
-          <p>Empresa/Dono</p>
-          <p>Descricao</p>
-          <p>Local</p>
+          <h2>{{ itens.nome }}</h2>
+          <p>R$ {{ itens.valor }}</p>
+          <p>{{ itens.empresa }}</p>
+          <p>{{ itens.descricao }}</p>
+          <p>{{ itens.endereco }}</p>
         </div>
 
         <div class="acoes">
-          <button [routerLink]="['/excluir-item']"><img src="../../.././../assets/icone-excluir.png" alt="Lixeira para excluir" class="icone"></button>
-          <button [routerLink]="['/editar-item']"><img src="../../.././../assets/icone-editar.png" alt="Ícone para editar" class="icone"></button>
+          <button [routerLink]="['/excluir-item/{{itens.id}}']"><img src="../../.././../assets/icone-excluir.png" alt="Lixeira para excluir" class="icone"></button>
+          <button [routerLink]="['/editar-item/{{itens.id}}']"><img src="../../.././../assets/icone-editar.png" alt="Ícone para editar" class="icone"></button>
         </div>
       </a>
+    </div>
   </section>
   <app-excluir-item *ngIf="mostrarGrid"></app-excluir-item>
 </main>

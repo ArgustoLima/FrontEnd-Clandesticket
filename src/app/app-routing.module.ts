@@ -35,10 +35,10 @@ const routes: Routes = [
     path: 'comprar-item', component: ComprarItemComponent
   },
   {
-    path: 'editar-item', component: EditarItemComponent
+    path: 'editar-item/:id', component: EditarItemComponent
   },
   {
-    path: 'excluir-item', component: ExcluirItemComponent
+    path: 'excluir-item/:id', component: ExcluirItemComponent
   },
   {
     path: 'cadastrar-cartao', component: CadastrarPagamentoComponent
@@ -46,7 +46,6 @@ const routes: Routes = [
   {
     path: '**', redirectTo: ''
   }
-
 ];
 
 @NgModule({

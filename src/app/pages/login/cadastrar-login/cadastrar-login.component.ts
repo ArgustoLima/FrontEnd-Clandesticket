@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ReusoApiUsuarioService } from 'src/app/service/reuso-api-usuario.service';
+import { Router } from '@angular/router';
+import { UsuarioService } from 'src/app/service/usuario.service';
 
 @Component({
   selector: 'app-cadastrar-login',
@@ -8,21 +9,33 @@ import { ReusoApiUsuarioService } from 'src/app/service/reuso-api-usuario.servic
 })
 export class CadastrarLoginComponent {
 
-  constructor(private service: ReusoApiUsuarioService) {}
+  constructor(
+    private service: UsuarioService,
+    private router: Router
+    ) {}
 
-  public usuarioPost(
-    valueNome: string,
-    valueCpf: string,
-    valueSenha: string,
-    valueRepetirsenha: string
-  ) {
-  return this.service.usuarioPost(
-    valueNome,
-    valueCpf,
-    valueSenha,
-    valueRepetirsenha).subscribe(
-      res => res,
-      error => error
-    );
-  }
+    public usuarioPost(
+      nome: string,
+      cpf: string,
+      senha: string,
+      repetirSenha: string
+    ) {
+      if (senha !== repetirSenha) {
+        window.alert("As senhas não coincidem!");
+        return;
+      }
+      return this.service.usuarioPostService(
+        nome,
+        cpf,
+        senha,
+        repetirSenha
+      ).subscribe(
+        res => {
+          this.router.navigate(['/entrar']);
+        },
+        error => window.alert(
+`Cadastro inválido!
+Insira as iformações corretamente.`)
+      );
+    }
 }

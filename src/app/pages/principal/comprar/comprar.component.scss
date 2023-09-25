@@ -3,15 +3,19 @@
 :host {
   .listagem {
     display: flex;
-    margin: auto;
+    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px 0;
+    width: 65%;
+    margin: 0 auto;
 
     .item {
+      display: flex;
+      flex-direction: column;
       background-color: $branco;;
       border-radius: 10px;
       box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
       padding: 20px;
+      margin: 10px 0;
       width: 260px;
       height: 300px;
 
@@ -27,6 +31,7 @@
 
       .informacoes {
         height: 280px;
+        margin: 0 auto;
       }
     }
   }

@@ -3,13 +3,13 @@
   <h2>Insira suas inforçaões para se cadastrar no site:</h2>
 
   <form>
-    <input #valueNome class="caixa-input" placeholder="Nome" type="text"/>
-    <input #valueCpf class="caixa-input" placeholder="CPF" type="text"/>
-    <input #valueSenha class="caixa-input" placeholder="Senha" type="password"/>
-    <input #valueRepetirsenha class="caixa-input" placeholder="Repetir senha" type="password"/>
-    <button (click)="usuarioPost(valueNome.value, valueCpf.value, valueSenha.value, valueRepetirsenha.value)" class="botao">Cadastrar</button>
+    <input #nome class="caixa-input" placeholder="Nome" type="text"/>
+    <input #cpf maxlength="11" class="caixa-input" placeholder="CPF" type="text"/>
+    <input #senha class="caixa-input" placeholder="Senha" type="password"/>
+    <input #repetirsenha class="caixa-input" placeholder="Repetir senha" type="password"/>
   </form>
 
+  <button (click)="usuarioPost(nome.value, cpf.value, senha.value, repetirsenha.value)" class="botao">Cadastrar</button>
   <p class="tem-conta">Já tem uma conta? <a class="criar-conta" [routerLink]="['/entrar']">Entre por aqui.</a></p>
 </main>
 <app-footer></app-footer>

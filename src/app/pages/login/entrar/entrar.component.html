@@ -2,11 +2,12 @@
 <main>
   <h2>Insira suas inforçaões para se logar no site:</h2>
 
-  <form>
-    <input class="caixa-input" placeholder="CPF" type="text"/>
-    <input class="caixa-input" placeholder="Senha" type="password"/>
-    <button class="botao" [routerLink]="['/comprar']">ENTRAR</button>
+  <form >
+    <input #cpf class="caixa-input" placeholder="CPF" type="text" maxlength="11"/>
+    <input #senha class="caixa-input" placeholder="Senha" type="password"/>
   </form>
+
+  <button class="botao" (click)="entrarPost(cpf.value, senha.value)">ENTRAR</button>
 
   <p class="tem-conta">Não tem uma conta? <a class="criar-conta" [routerLink]="['/cadastrar-login']">Criar conta.</a></p>
 </main>

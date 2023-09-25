@@ -8,10 +8,6 @@
     padding-top: 32px;
     gap: 32px;
 
-    button {
-      margin: auto;
-    }
-
     select {
       padding: 0 20px;
       font-size: 16px;
@@ -26,5 +22,9 @@
         background-color: rgba(0, 0, 0, 0.25);
       }
     }
+  }
+  
+  button {
+    margin: 32px auto 0 auto;
   }
 }
