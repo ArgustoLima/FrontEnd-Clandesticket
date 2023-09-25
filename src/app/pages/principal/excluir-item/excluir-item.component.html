@@ -3,9 +3,8 @@
   <div class="grid">
     <div class="caixa">
       <h2>Deseja confirmar a exclusão?</h2>
-      <p>Nome</p>
 
-      <button  ><p>Sim</p></button>
+      <button (click)="excluirItem()"><p>Sim</p></button>
       <button [routerLink]="['/listar']"><p>Cancelar</p></button>
     </div>
   </div>

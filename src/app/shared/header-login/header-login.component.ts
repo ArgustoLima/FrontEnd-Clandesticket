@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ReusoService } from 'src/app/service/reuso.service';
 
 @Component({
   selector: 'app-header-login',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-login.component.scss']
 })
 export class HeaderLoginComponent {
+
+  constructor(public reuso: ReusoService) {}
 
 }

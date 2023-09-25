@@ -18,9 +18,9 @@ export class CadastrarLoginComponent {
       nome: string,
       cpf: string,
       senha: string,
-      repetirSenha: string
+      repetir_senha: string
     ) {
-      if (senha !== repetirSenha) {
+      if (senha !== repetir_senha) {
         window.alert("As senhas não coincidem!");
         return;
       }
@@ -28,11 +28,9 @@ export class CadastrarLoginComponent {
         nome,
         cpf,
         senha,
-        repetirSenha
+        repetir_senha
       ).subscribe(
-        res => {
-          this.router.navigate(['/entrar']);
-        },
+        res => this.router.navigate(['/entrar']),
         error => window.alert(
 `Cadastro inválido!
 Insira as iformações corretamente.`)

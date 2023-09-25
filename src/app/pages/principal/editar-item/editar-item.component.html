@@ -3,12 +3,13 @@
   <h2>Insira as informações para editar o ticket:</h2>
 
   <form>
-    <input class="caixa-input" placeholder="Nome evento" className="input" type="text">
-    <input class="caixa-input" placeholder="Valor" className="input" type="number">
-    <input class="caixa-input" placeholder="Descrição" className="input" type="text">
-    <input class="caixa-input" placeholder="Empresa" className="input" type="text"/>
-    <input class="caixa-input" placeholder="Endereço" className="input" type="text">
-    <button class="botao">Editar</button>
+    <input #nome class="caixa-input" placeholder="{{ reuso.placeholderNome }}" className="input" type="text">
+    <input #valor class="caixa-input" placeholder="Valor" className="input" type="text">
+    <input #empresa class="caixa-input" placeholder="{{ reuso.placeholderDono }}" className="input" type="text"/>
+    <input #descricao class="caixa-input" placeholder="descrição" className="input" type="text">
+    <input #endereco class="caixa-input" placeholder="{{ reuso.placeholderEndereco }}" className="input" type="text">
   </form>
+
+  <button class="botao">Editar</button>
 </main>
 <app-footer></app-footer>

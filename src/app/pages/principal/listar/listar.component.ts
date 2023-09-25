@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Itens } from 'src/app/modules/itens.module';
 import { ItemService } from 'src/app/service/item.service';
 
@@ -7,13 +7,7 @@ import { ItemService } from 'src/app/service/item.service';
   templateUrl: './listar.component.html',
   styleUrls: ['./listar.component.scss']
 })
-export class ListarComponent {
-
-  public mostrarGrid = false;
-
-  public excluir() {
-    this.mostrarGrid = true;
-  }
+export class ListarComponent implements OnInit {
 
   listaItens: Itens[] = [];
 
@@ -25,5 +19,9 @@ export class ListarComponent {
         this.listaItens = res;
       }
     );
+  }
+
+  public retornarIndex(index: any) {
+    this.itemService.id = this.listaItens[index].id;
   }
 }

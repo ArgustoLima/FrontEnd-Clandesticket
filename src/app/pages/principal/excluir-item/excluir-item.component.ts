@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Itens } from 'src/app/modules/itens.module';
 import { ItemService } from 'src/app/service/item.service';
 
@@ -8,29 +8,26 @@ import { ItemService } from 'src/app/service/item.service';
   templateUrl: './excluir-item.component.html',
   styleUrls: ['./excluir-item.component.scss']
 })
-export class ExcluirItemComponent implements OnInit{
+export class ExcluirItemComponent {
 
-  listaItens: Itens[] = [];
+  public listaItens: Itens[] = [];
 
-  constructor (private itemService: ItemService, private route : ActivatedRoute, private activeRoute: ActivatedRoute,) {}
+  constructor (
+    private itemService: ItemService,
+    private router : Router,
+    ) {}
 
-
-  ngOnInit(): void {
-    this.itemService.itemGetService().subscribe(
-      res => {
-        this.listaItens = res;
-      }
-    );
-   }
-
-   public excluirItem(id: number) {
-    return this.itemService.itemDeleteService(id).subscribe(
+   public excluirItem() {
+    const index: number = this.itemService.id;
+    return this.itemService.itemDeleteService(index).subscribe(
       res => {
         this.listaItens = this.listaItens.filter(
           item => {
-            return id != item.id
+            return index != item.id
           }
-        )
+        ),
+        window.alert("Deleção efetuado com sucesso!"),
+        this.router.navigate(['/listar'])
       },
       error => error
     )

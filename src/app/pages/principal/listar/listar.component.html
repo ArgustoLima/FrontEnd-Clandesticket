@@ -1,7 +1,7 @@
 <app-header-principal></app-header-principal>
 <main>
   <section class="listagem">
-    <div *ngFor="let itens of listaItens">
+    <div *ngFor="let itens of listaItens, let i = index">
       <a class="item">
         <div class="informacoes">
           <h2>{{ itens.nome }}</h2>
@@ -12,12 +12,11 @@
         </div>
 
         <div class="acoes">
-          <button [routerLink]="['/excluir-item/{{itens.id}}']"><img src="../../.././../assets/icone-excluir.png" alt="Lixeira para excluir" class="icone"></button>
-          <button [routerLink]="['/editar-item/{{itens.id}}']"><img src="../../.././../assets/icone-editar.png" alt="Ícone para editar" class="icone"></button>
+          <button [routerLink]="['/excluir-item/{{itens.id}}']" (click)="retornarIndex(i)"><img src="../../.././../assets/icone-excluir.png" alt="Lixeira para excluir" class="icone"></button>
+          <button [routerLink]="['/editar-item/{{itens.id}}']" (click)="retornarIndex(i)"><img src="../../.././../assets/icone-editar.png" alt="Ícone para editar" class="icone"></button>
         </div>
       </a>
     </div>
   </section>
-  <app-excluir-item *ngIf="mostrarGrid"></app-excluir-item>
 </main>
 <app-footer></app-footer>

@@ -10,9 +10,9 @@ import { Usuario } from '../modules/usuario.module';
 export class ItemService {
 
   private url: string = 'http://localhost:8080/';
+  public id!: number;
 
-  constructor(
-    private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   public itemPostService(
     nome: string,
@@ -40,13 +40,17 @@ export class ItemService {
     )
   }
 
-  public buscarPorId(id : number) : Observable<Itens> {
+  public buscarPorId(id : number): Observable<Itens> {
     const url = `${this.url}itens/${id}`
     return this.http.get<Itens>(url)
   }
 
-  public itemDeleteService(id: number) : Observable<Usuario> {
-    return this.http.delete<Usuario>(`${this.url}itens/${id}`)
+  public itemDeleteService(id: number): Observable<Itens> {
+    return this.http.delete<Itens>(`${this.url}itens/${id}`)
   }
 
+  public itemPutService(itens: Itens): Observable<Itens> {
+    const url = `${this.url}itens/${itens.id}`;
+    return this.http.put<Itens>(url, itens);
+  }
 }

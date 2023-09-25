@@ -17,13 +17,13 @@ export class UsuarioService {
     nome: string,
     cpf: string,
     senha: string,
-    repetirsenha: string
+    repetir_senha: string
     ): Observable<Usuario> {
     return this.http.post<Usuario>(`${this.url}usuarios`, {
       nome: nome,
       cpf: cpf,
       senha: senha,
-      repetirsenha: repetirsenha,
+      repetir_senha: repetir_senha,
     }). pipe (
       res => res,
       error => error,

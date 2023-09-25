@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/service/auth.service';
+import { ReusoService } from 'src/app/service/reuso.service';
 
 @Component({
   selector: 'app-header-principal',
@@ -9,7 +10,8 @@ import { AuthService } from 'src/app/service/auth.service';
 export class HeaderPrincipalComponent {
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    public reuso: ReusoService
   ) {}
 
   public logout() {
