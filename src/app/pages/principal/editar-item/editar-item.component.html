@@ -3,13 +3,14 @@
   <h2>Insira as informações para editar o ticket:</h2>
 
   <form>
-    <input #nome class="caixa-input" placeholder="{{ reuso.placeholderNome }}" className="input" type="text">
-    <input #valor class="caixa-input" placeholder="Valor" className="input" type="text">
-    <input #empresa class="caixa-input" placeholder="{{ reuso.placeholderDono }}" className="input" type="text"/>
-    <input #descricao class="caixa-input" placeholder="descrição" className="input" type="text">
-    <input #endereco class="caixa-input" placeholder="{{ reuso.placeholderEndereco }}" className="input" type="text">
+    <input [(ngModel)]="itens.nome" name="nome" class="caixa-input" placeholder="Nome" className="input" type="text">
+    <input [(ngModel)]="itens.valor" name="valor" class="caixa-input" placeholder="Valor" className="input" type="text">
+    <input [(ngModel)]="itens.empresa" name="empresa" class="caixa-input" placeholder="Empresa" className="input" type="text"/>
+    <input [(ngModel)]="itens.descricao" name="descricao" class="caixa-input" placeholder="descrição" className="input" type="text">
+    <input [(ngModel)]="itens.endereco" name="endereco" class="caixa-input" placeholder="Endereco" className="input" type="text">
+    <div>
+      <button class="botao" (click)="editarItem()">Editar</button>
+    </div>
   </form>
-
-  <button class="botao">Editar</button>
 </main>
 <app-footer></app-footer>

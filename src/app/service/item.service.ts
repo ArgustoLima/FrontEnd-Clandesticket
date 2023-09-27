@@ -51,6 +51,6 @@ export class ItemService {
 
   public itemPutService(itens: Itens): Observable<Itens> {
     const url = `${this.url}itens/${itens.id}`;
-    return this.http.put<Itens>(url, itens);
+    return this.http.put<Itens>(url, itens)
   }
 }

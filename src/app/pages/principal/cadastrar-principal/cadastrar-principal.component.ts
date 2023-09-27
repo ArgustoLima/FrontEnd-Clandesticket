@@ -10,7 +10,7 @@ import { UsuarioService } from 'src/app/service/usuario.service';
   templateUrl: './cadastrar-principal.component.html',
   styleUrls: ['./cadastrar-principal.component.scss']
 })
-export class CadastrarPrincipalComponent implements OnInit {
+export class CadastrarPrincipalComponent {
 
   private id: number = 19;
 
@@ -19,11 +19,6 @@ export class CadastrarPrincipalComponent implements OnInit {
     private service: ItemService,
     private router: Router
   ) {}
-
-  ngOnInit(): void {
-    const userId = "";
-    console.log(userId);
-  }
 
   public itemPost(
     nome: string,

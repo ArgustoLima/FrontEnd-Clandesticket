@@ -10,6 +10,7 @@ import { AuthService } from './auth.service';
 export class UsuarioService {
 
   private url: string = 'http://localhost:8080/';
+  public id!: number;
 
   constructor(private http: HttpClient) { }
 
@@ -30,7 +31,12 @@ export class UsuarioService {
     );
   }
 
-  usuarioGetService(id: number) : Observable<Usuario> {
-    return this.http.get<Usuario>(`${this.url}usuarios/${id}`)
+  public usuarioGetService() : Observable<Array<Usuario>> {
+    return this.http.get<Array<Usuario>>(`${this.url}usuarios`)
+  }
+
+  public buscarPorId(id : number): Observable<Usuario> {
+    const url = `${this.url}usuarios/${id}`
+    return this.http.get<Usuario>(url)
   }
 }

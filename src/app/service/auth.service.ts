@@ -40,7 +40,4 @@ export class AuthService {
     const jwtHelper = new JwtHelperService();
     return !jwtHelper.isTokenExpired(token);
   }
-
-
-
 }
