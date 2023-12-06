@@ -20,7 +20,6 @@ import { EditarItemComponent } from './pages/principal/editar-item/editar-item.c
 import { ExcluirItemComponent } from './pages/principal/excluir-item/excluir-item.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CadastrarPagamentoComponent } from './pages/principal/cadastrar-pagamento/cadastrar-pagamento.component';
-import { ReusoService } from './service/reuso.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +45,7 @@ import { ReusoService } from './service/reuso.service';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [ReusoService],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

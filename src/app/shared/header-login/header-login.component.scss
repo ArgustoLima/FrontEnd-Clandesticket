@@ -27,5 +27,14 @@
         }
       }
     }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      ul {
+        padding-top: 5px;
+        gap: 40px
+      }
+    }
   }
 }

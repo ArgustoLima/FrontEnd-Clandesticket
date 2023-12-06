@@ -3,9 +3,9 @@
 :host {
   .listagem {
     display: flex;
-    justify-content: space-between;
+    gap: 24px;
     flex-wrap: wrap;
-    width: 65%;
+    width: 584px;
     margin: 0 auto;
 
     .item {
@@ -16,12 +16,11 @@
       box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
       padding: 20px;
       margin: 10px 0;
-      width: 260px;
+      width: 240px;
       height: 300px;
 
       &:hover {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        cursor: pointer;
       }
 
       p {
@@ -32,6 +31,28 @@
       .informacoes {
         height: 280px;
         margin: 0 auto;
+      }
+
+      .acoes {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        .icone {
+          width: 26px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 250px;
+
+      .item {
+        padding: 15px;
+        margin: 10px 0;
+        width: 220px;
+        height: 280px;
       }
     }
   }

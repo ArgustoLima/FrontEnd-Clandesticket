@@ -26,5 +26,17 @@ main {
     font-size: 18px;
     color: $cinza;
   }
+
+  @media (max-width: 768px) {
+    padding: 64px 24px;
+
+    h2 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
 }
 

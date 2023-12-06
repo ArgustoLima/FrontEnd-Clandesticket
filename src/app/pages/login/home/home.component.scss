@@ -6,13 +6,23 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 180px;
     color: $cinza;
+
   }
 
   h2 {
+    font-weight: 700;
     padding-top: 32px;
+    color: $branco;
   }
 
-  p {
-    padding-top: 32px;
+  @media (max-width: 768px) {
+    h1 {
+    font-size: 140px;
+    }
+
+    h2 {
+      font-weight: 300;
+      padding-top: 64px;
+    }
   }
 }

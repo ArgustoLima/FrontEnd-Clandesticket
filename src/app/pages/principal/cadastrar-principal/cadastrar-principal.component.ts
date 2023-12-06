@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/service/auth.service';
 import { ItemService } from 'src/app/service/item.service';
-import { ReusoService } from 'src/app/service/reuso.service';
-import { UsuarioService } from 'src/app/service/usuario.service';
 
 @Component({
   selector: 'app-cadastrar-principal',
@@ -15,7 +12,6 @@ export class CadastrarPrincipalComponent {
   private id: number = 19;
 
   constructor(
-    public reuso: ReusoService,
     private service: ItemService,
     private router: Router
   ) {}

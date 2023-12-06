@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Itens } from 'src/app/modules/itens.module';
 import { ItemService } from 'src/app/service/item.service';
-import { ReusoService } from 'src/app/service/reuso.service';
 
 @Component({
   selector: 'app-editar-item',
@@ -23,7 +22,6 @@ export class EditarItemComponent implements OnInit {
   }
 
   constructor (
-    public reuso: ReusoService,
     private itemService: ItemService,
     private router: Router,
   ) {}
